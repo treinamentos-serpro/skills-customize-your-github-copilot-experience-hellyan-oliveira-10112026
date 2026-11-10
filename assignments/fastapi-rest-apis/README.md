@@ -1,46 +1,46 @@
-# 📘 Assignment: Building REST APIs with FastAPI
+# 📘 Assignment: Criando APIs REST com FastAPI
 
 ## 🎯 Objective
 
-Build a REST API for managing a collection of books with FastAPI. Practice HTTP methods, resource URLs, request validation, and appropriate status codes.
+Crie uma API REST para gerenciar uma coleção de livros usando FastAPI. Pratique métodos HTTP, URLs de recursos, validação de requisições e o uso adequado de códigos de status.
 
 ## 📝 Tasks
 
-### 🛠️ Create the API and Read Books
+### 🛠️ Criar a API e Consultar Livros
 
-#### Description
-Install FastAPI and Uvicorn with `pip install fastapi uvicorn`. Use the provided starter code to create the application and implement endpoints for listing books and retrieving one book by its ID. Run the server with `uvicorn starter-code:app --reload` and explore the interactive API documentation at `/docs`.
+#### Descrição
+Instale FastAPI e Uvicorn com `pip install fastapi uvicorn`. Use o código inicial fornecido para configurar a aplicação e implementar endpoints para listar livros e consultar um livro pelo ID. Inicie o servidor com `uvicorn starter-code:app --reload` e explore a documentação interativa da API em `/docs`.
 
-#### Requirements
-The completed program must:
+#### Requisitos
+O programa concluído deve:
 
-- Create a FastAPI application
-- Return all books from `GET /books`
-- Return one book from `GET /books/{book_id}`
-- Return status code `404` when the requested book does not exist
+- Disponibilizar uma aplicação FastAPI
+- Retornar todos os livros em `GET /books`
+- Retornar um livro em `GET /books/{book_id}`
+- Retornar o código de status `404` quando o livro solicitado não existir
 
-### 🛠️ Add Books with Validated Requests
+### 🛠️ Adicionar Livros com Validação
 
-#### Description
-Implement an endpoint for adding a book. Use the provided Pydantic model to validate incoming data, and assign each new book a unique ID.
+#### Descrição
+Implemente um endpoint para adicionar um livro. Use o modelo Pydantic fornecido para validar os dados recebidos e atribua um ID único a cada novo livro.
 
-#### Requirements
-The completed program must:
+#### Requisitos
+O programa concluído deve:
 
-- Accept a new book through `POST /books`
-- Validate the book's title and author using the provided model
-- Assign and return a unique ID for the new book
-- Return status code `201` when a book is created
+- Aceitar um novo livro por meio de `POST /books`
+- Validar o título e o autor do livro usando o modelo fornecido
+- Atribuir e retornar um ID único para o novo livro
+- Retornar o código de status `201` quando um livro for criado
 
-### 🛠️ Update and Remove Books
+### 🛠️ Atualizar e Remover Livros
 
-#### Description
-Complete the API by adding endpoints to replace a book's details and remove a book by ID. Try each endpoint in `/docs` and check both successful and not-found responses.
+#### Descrição
+Complete a API adicionando endpoints para substituir os dados de um livro e removê-lo pelo ID. Teste cada endpoint em `/docs` e confira tanto as respostas de sucesso quanto as respostas para recursos não encontrados.
 
-#### Requirements
-The completed program must:
+#### Requisitos
+O programa concluído deve:
 
-- Update a book through `PUT /books/{book_id}`
-- Remove a book through `DELETE /books/{book_id}`
-- Return status code `404` when an update or deletion targets a missing book
-- Demonstrate the full create, read, update, and delete workflow
+- Atualizar um livro por meio de `PUT /books/{book_id}`
+- Remover um livro por meio de `DELETE /books/{book_id}`
+- Retornar o código de status `404` quando uma atualização ou remoção buscar um livro inexistente
+- Demonstrar o fluxo completo de criação, consulta, atualização e remoção
